@@ -10,14 +10,28 @@ const getNames = function () {
 
   });
 };
+//
+// getNames().then(data=> {
+//   cosole.log(data)
+//   data.forEach(name=>{
+//     const newLi = document.createElement("li");
+//     newLi.innerText = name;
+//     ulList.appendChild(newLi)
+//   })
+// }).catch(error=>{
+//   console.log()
+// })
 
-getNames().then(data=> {
-  cosole.log(data)
-  data.forEach(name=>{
-    const newLi = document.createElement("li");
-    newLi.innerText = name;
-    ulList.appendChild(newLi)
-  })
-}).catch(error=>{
-  console.log()
+
+getNames().
+    then((data) => {
+      console.log(data);
+      data.forEach((name) => {
+        const newLi = document.createElement('li');
+        newLi.className = '.list-group-item';
+        newLi.innerText = name;
+        ulList.appendChild(newLi);
+      })
+}).catch(error=> {
+  console.log(error);
 })
