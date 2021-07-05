@@ -1,5 +1,5 @@
 const path = require("path");
-const entryPath = "03_Dzien_4/03_Async_Await/02_Zadanie_2";
+const entryPath = "03_Dzien_4/03_Async_Await/03_Zadanie_3";
 
 module.exports = {
   entry: ["whatwg-fetch",`./${entryPath}/js/app.js`],
